@@ -1,12 +1,13 @@
 # Dog Breed Classification Project declined in a app
 
 ## Table of Contents
-Introduction & Motivation
-Libraries used
-Model and function creations
-Web Application
-Instructions to run the Web application
-Ressources
+- Introduction & Motivation
+- Libraries used
+- Model and function creations
+- Main difficuly
+- Web Application
+- Instructions to run the Web application
+- Ressources
 
 ## Introduction & Motivation 
 This project uses Convolutional Neural Networks (CNNs)! In this project,we build a pipeline to process real-world, user-supplied images.
@@ -73,6 +74,43 @@ The main steps are :
 - Use a CNN to Classify Dog Breeds, with Transfer Learning --> 65 % of accurency
 - Create a CNN to Classify Dog Breeds, , with Transfer Learning with specialise model --> 80% of accurency
 - Sum-up the all in a function 
+
+## Main difficuly
+### Problem Introduction
+To find the correct dog breed.
+
+For human and others types, it is not important because it more for fun than a science.
+
+### Strategy to solve the problem
+ - Experience
+ - Test and retry
+ - Online documentation
+ - Use Udacity learning
+### Metrics
+accurency
+### EDA
+### Modelling
+Benchmark Analysis is the base model against which your model could be compared. For example, if you are building a binary classification model using random forest, then the benchmark model could be logistic regression, which is a simple model. In your case, for dog breed your benchmark model could be some simple neural network model or any of the neural network model on which you can compare your current model and prove that your current model is better than your benchmark model.
+
+A decision tree could also work for this type of categorisation problem.
+
+### Hyperparameter tuning
+Hyper parameters are the parameters which you will using for your neural nework model. You could find detailed explanation of hyper paramters in below link,
+
+https://towardsdatascience.com/neural-networks-parameters-hyperparameters-and-optimization-strategies-3f0842fac0a5
+- I don't use Grid CV
+### Results - Conclusion/Reflection
+The results were very quicky 
+None of the images I looked give me a strong wrong answer.
+I was able to detect than a wolf is not a dog !
+
+But I think there are some idea to improve the model.
+
+### Improvements
+- Use InceptionV3
+- Use GridCV
+- Improved the dataset, especcially for close breeds :
+- Add a metadata : the sex of the dog.
 
 ## Web Application
 To use this model, you can find a web app running with Flask.
