@@ -54,36 +54,54 @@ The main steps are :
 
 ## Main difficuly
 ### Problem Introduction
-To find the correct dog breed.
+To find the correct dog breed from a picture, we need to create a model really performant.
+But how to to that :
 
-For human and others types, it is not important because it more for fun than a science.
-The function to detect Human face and detect a dog are already suit by Udacity.
+Note : <i> For human and others types classification in dog breed, it is not important because it more for fun than a science.
+The functions to detect Human face and detect a dog are already suit by Udacity. </i>
 
-### Strategy to solve the problem
+### Strategy to solve the problem and model seletion
  To solve the problem, u used in order these strategie :
  
- - Use Udacity learning :
- - Experience : With my experience with CNN for image processing in my work, I know that 
- - Online documentation : I search advice online and took it (See Ressources section)
+ - Use Udacity learning : udacity encourage us to use CNN to answer to this method.
+   - They also provided us an exemaple of a
+   - They also provided us an exemaple of pre-trained model and the gain in term of accurency.
+   - Therefore, we continue on this way.
+   -
+ - Experience : With my experience with CNN for image processing in my work, I know that " branch model with direct, semi direct and 3 layers models give good results and are simple. This is often a good combinaison to get to get the first steps of good performance.
+ - Online documentation : I search advice online and took it on how choose as parameter for this type of classsifcation. (See Ressources section)
  - Test and retry : Due to the facts 
    - There is few parameters
    - The amount of time to a set of parameter (with a correct epochs) take only a minute 
    - The results was at the rendezvous quickly.
- 
- 
-### Metrics
-accurency
-### EDA
-### Modelling
-Benchmark Analysis is the base model against which your model could be compared. For example, if you are building a binary classification model using random forest, then the benchmark model could be logistic regression, which is a simple model. In your case, for dog breed your benchmark model could be some simple neural network model or any of the neural network model on which you can compare your current model and prove that your current model is better than your benchmark model.
 
 A decision tree could also work for this type of categorisation problem.
 
-### Hyperparameter tuning
-Hyper parameters are the parameters which you will using for your neural nework model. You could find detailed explanation of hyper paramters in below link,
+We can use a optimiser like GridSearchCV to find the best configuration.
 
-https://towardsdatascience.com/neural-networks-parameters-hyperparameters-and-optimization-strategies-3f0842fac0a5
-- I don't use Grid CV
+### Actual Architecture
+- I start by initialisaing the model downloaded (resnet_50) as Sequencial model.
+- I define an input_shape with the right format for the selected model.
+- I define the associated Dense paremeter (number of node) with the number of breed in our dataset = 133.
+- By experience of the previous step, I test to add a dropout to limited the overfitting and it was an improvement for the value 0,05. 0,1 and 0,2 was not.
+- Optimiser : I test to change the optimizer in 'adam' but'rmsprop' seem better.
+- Choice of pre-trained CNN : I tried to download the InceptionV3 but it was too big in term of MB. Therefore I go for the Resnet_50
+
+### Data 
+Our Datasets have been provided by Udacity :  
+We split our data into too group by random selection : train and a test set.
+
+- There are 133 total dog categories.
+- There are 8351 total dog images.
+- There are 6680 training dog images.
+- There are 835 validation dog images.
+- There are 836 test dog images.
+
+### Metrics
+The accurency is our main metric.
+This is the percentage of correct prediction made by the model compared to the test set.
+
+
 ### Results - Conclusion/Reflection
 The results became very quicky 
 None of the images I looked give me a strong wrong answer.
