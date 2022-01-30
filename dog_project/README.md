@@ -16,51 +16,28 @@ Given an image of a dog, the algorithm will identify an estimate of the canineâ€
 To complete this approach, you can play with this algorithm in a web application.
 
 ## Libraries used
-import json
+- json
+- plotly
+- pandas 
+- nltk
+- sklearn.datasets import load_files      
+- keras.utils import np_utils
+- numpy as np
+- glob import glob
+- cv2             
+- matplotlib.pyplot as plt 
+- keras.applications.resnet50 import ResNet50
+- keras.preprocessing import image         
+- tqdm import tqdm
+- keras.applications.resnet50 import preprocess_input, decode_predictions
+- keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D
+- keras.layers import Dropout, Flatten, Dense
+- keras.models import Sequential
+- keras.callbacks import ModelCheckpoint  
+- extract_bottleneck_features import *
+- flask import Flask
+- flask import render_template, request, jsonify
 
-import plotly
-
-import pandas as pd
-
-import nltk
-
-from sklearn.datasets import load_files      
-
-from keras.utils import np_utils
-
-import numpy as np
-
-from glob import glob
-
-
-import cv2             
-
-import matplotlib.pyplot as plt 
-
-from keras.applications.resnet50 import ResNet50
-
-from keras.preprocessing import image         
-
-from tqdm import tqdm
-
-from keras.applications.resnet50 import preprocess_input, decode_predictions
-
-
-from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D
-
-from keras.layers import Dropout, Flatten, Dense
-
-from keras.models import Sequential
-
-from keras.callbacks import ModelCheckpoint  
-
-from extract_bottleneck_features import *
-
-from flask import Flask
-
-from flask import render_template, request, jsonify
-
-You need to donwload in store in feature the the file following
 
 ## Model creation
 
