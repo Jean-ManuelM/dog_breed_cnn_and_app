@@ -16,32 +16,49 @@ To complete this approach, you can play with this algorithm in a web application
 
 ## Libraries used
 import json
+
 import plotly
+
 import pandas as pd
+
 import nltk
 
-from sklearn.datasets import load_files       
+from sklearn.datasets import load_files      
+
 from keras.utils import np_utils
+
 import numpy as np
+
 from glob import glob
 
-import cv2                
-import matplotlib.pyplot as plt                        
+
+import cv2             
+
+import matplotlib.pyplot as plt 
 
 from keras.applications.resnet50 import ResNet50
-from keras.preprocessing import image                  
+
+from keras.preprocessing import image         
+
 from tqdm import tqdm
+
 from keras.applications.resnet50 import preprocess_input, decode_predictions
 
+
 from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D
+
 from keras.layers import Dropout, Flatten, Dense
+
 from keras.models import Sequential
+
 from keras.callbacks import ModelCheckpoint  
 
 #from extract_bottleneck_features import *
 
 from flask import Flask
+
 from flask import render_template, request, jsonify
+
 You need to donwload in store in feature the the file following
 
 ## Model creation
@@ -73,5 +90,7 @@ To use this model, you can find a web app running with Flask.
 
 ## Ressources
 https://knowledge.udacity.com/
+
 https://keras.io/api/
+
 https://www.simplilearn.com/tutorials/deep-learning-tutorial/guide-to-building-powerful-keras-image-classification-models
