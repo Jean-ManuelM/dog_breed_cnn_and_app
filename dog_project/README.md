@@ -80,12 +80,20 @@ The main steps are :
 To find the correct dog breed.
 
 For human and others types, it is not important because it more for fun than a science.
+The function to detect Human face and detect a dog are already suit by Udacity.
 
 ### Strategy to solve the problem
- - Experience
- - Test and retry
- - Online documentation
- - Use Udacity learning
+ To solve the problem, u used in order these strategie :
+ 
+ - Use Udacity learning :
+ - Experience : With my experience with CNN for image processing in my work, I know that 
+ - Online documentation : I search advice online and took it (See Ressources section)
+ - Test and retry : Due to the facts 
+   - There is few parameters
+   - The amount of time to a set of parameter (with a correct epochs) take only a minute 
+   - The results was at the rendezvous quickly.
+ 
+ 
 ### Metrics
 accurency
 ### EDA
@@ -100,17 +108,19 @@ Hyper parameters are the parameters which you will using for your neural nework 
 https://towardsdatascience.com/neural-networks-parameters-hyperparameters-and-optimization-strategies-3f0842fac0a5
 - I don't use Grid CV
 ### Results - Conclusion/Reflection
-The results were very quicky 
+The results became very quicky 
 None of the images I looked give me a strong wrong answer.
-I was able to detect than a wolf is not a dog !
+I was able to detect than a wolf is not a dog ! I was very impress.
 
-But I think there are some idea to improve the model.
+But I think there are some idea to improve the model :
 
 ### Improvements
+- Add a metadata : the sex of the dog.
+- Improved the dataset, especcially for close breeds :
 - Use InceptionV3
 - Use GridCV
-- Improved the dataset, especcially for close breeds :
-- Add a metadata : the sex of the dog.
+
+
 
 ## Web Application
 To use this model, you can find a web app running with Flask.
