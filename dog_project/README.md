@@ -53,7 +53,7 @@ from keras.models import Sequential
 
 from keras.callbacks import ModelCheckpoint  
 
-#from extract_bottleneck_features import *
+from extract_bottleneck_features import *
 
 from flask import Flask
 
@@ -83,10 +83,10 @@ To use this model, you can find a web app running with Flask.
 
 2.You need to download the Resnet50 model at this adress https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogResnet50Data.npz and store this file as "DogResnet50Data.npz" in the folder "bottleneck_features".
 
-2. Run the following command in the app's directory to run your web app.
+3. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+4. Go to http://0.0.0.0:3001/
 
 ## Ressources
 https://knowledge.udacity.com/
