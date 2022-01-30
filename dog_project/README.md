@@ -110,10 +110,21 @@ I was able to detect than a wolf is not a dog ! I was very impress.
 But I think there are some idea to improve the model :
 
 ### Improvements
-- Add a metadata : the sex of the dog.
-- Improved the dataset, especcially for close breeds :
+- Add a metadata in the data: the sex of the dog.
+Because the sex change sometime the appereace of a dog, he may confuse the model sometime. As example for the Beauceron breed, the male are 10-15 kg giger than the female and have they ear cut because they are much taller.
+![Beauceron male](https://www.dog-breeds-expert.com/images/beauceron-1.jpg)
+![Beauceron female](https://i68.servimg.com/u/f68/18/16/32/88/iuka0110.jpg)
+
+- Improved the dataset, get more picture, especcially for close breeds : My model give me as result that this beauceron is a doberman... and i can't blame it !
+![Beauceron male](https://www.dog-breeds-expert.com/images/beauceron-1.jpg)
+![Doberman](https://www.photos-nature-passion.fr/images/photo-de-chien-doberman_3.jpg)
+
+
 - Use InceptionV3
-- Use GridCV
+It seem to be a greatest pre-trained model for this type of classification.
+
+- Use GridsearchCV (or equivalent)
+To find the best parameters.
 
 
 
